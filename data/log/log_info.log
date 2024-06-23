@@ -1,0 +1,332 @@
+24-06-22.16:23:31.061 [background-preinit] INFO  Version                - HV000001: Hibernate Validator 6.2.5.Final
+24-06-22.16:23:31.069 [main            ] INFO  Application            - Starting Application using Java 17.0.5 on LAPTOP-EN7AFHC7 with PID 16800 (E:\java_works\practical-training\target\classes started by HarryKL in E:\java_works\practical-training)
+24-06-22.16:23:31.070 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-06-22.16:23:31.570 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.16:23:31.572 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.16:23:31.600 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-06-22.16:23:31.674 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[top.kangyaocoding.training]' package. Please check your configuration.
+24-06-22.16:23:32.220 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-06-22.16:23:32.221 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+24-06-22.16:23:32.221 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+24-06-22.16:23:32.221 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+24-06-22.16:23:32.238 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+24-06-22.16:23:32.246 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-06-22.16:23:32.247 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-06-22.16:23:32.247 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-06-22.16:23:32.364 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-06-22.16:23:32.364 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1260 ms
+24-06-22.16:23:32.512 [main            ] INFO  Version                - Redisson 3.30.0
+24-06-22.16:23:32.685 [main            ] WARN  SequentialDnsAddressResolverFactory - DNS TCP fallback on UDP query timeout disabled. Upgrade Netty to 4.1.105 or higher.
+24-06-22.16:23:37.360 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [top/kangyaocoding/training/config/RedisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
+24-06-22.16:23:37.362 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+24-06-22.16:23:37.378 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+24-06-22.16:23:37.391 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [top/kangyaocoding/training/config/RedisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at top.kangyaocoding.training.Application.main(Application.java:20)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 19 common frames omitted
+Caused by: org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
+	at org.redisson.connection.MasterSlaveConnectionManager.doConnect(MasterSlaveConnectionManager.java:233)
+	at org.redisson.connection.MasterSlaveConnectionManager.connect(MasterSlaveConnectionManager.java:193)
+	at org.redisson.config.ConfigSupport.createConnectionManager(ConfigSupport.java:216)
+	at org.redisson.Redisson.<init>(Redisson.java:70)
+	at org.redisson.Redisson.create(Redisson.java:115)
+	at top.kangyaocoding.training.config.RedisConfig.redissonClient(RedisConfig.java:29)
+	at top.kangyaocoding.training.config.RedisConfig$$EnhancerBySpringCGLIB$$58cb3d4f.CGLIB$redissonClient$0(<generated>)
+	at top.kangyaocoding.training.config.RedisConfig$$EnhancerBySpringCGLIB$$58cb3d4f$$FastClassBySpringCGLIB$$b198d27e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at top.kangyaocoding.training.config.RedisConfig$$EnhancerBySpringCGLIB$$58cb3d4f.redissonClient(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 20 common frames omitted
+Caused by: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.redisson.connection.MasterSlaveConnectionManager.doConnect(MasterSlaveConnectionManager.java:228)
+	... 35 common frames omitted
+Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
+	at org.redisson.connection.ConnectionsHolder.lambda$createConnection$2(ConnectionsHolder.java:165)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at org.redisson.connection.ConnectionsHolder.lambda$createConnection$5(ConnectionsHolder.java:179)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at org.redisson.client.RedisClient$1$2.run(RedisClient.java:304)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.util.concurrent.CompletionException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: 127.0.0.1/127.0.0.1:6379
+	at java.base/java.util.concurrent.CompletableFuture.encodeRelay(CompletableFuture.java:368)
+	at java.base/java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:377)
+	at java.base/java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:1097)
+	... 11 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: 127.0.0.1/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+24-06-22.16:25:04.472 [background-preinit] INFO  Version                - HV000001: Hibernate Validator 6.2.5.Final
+24-06-22.16:25:04.475 [main            ] INFO  Application            - Starting Application using Java 17.0.5 on LAPTOP-EN7AFHC7 with PID 28376 (E:\java_works\practical-training\target\classes started by HarryKL in E:\java_works\practical-training)
+24-06-22.16:25:04.476 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-06-22.16:25:04.909 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.16:25:04.911 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.16:25:04.928 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-06-22.16:25:04.993 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[top.kangyaocoding.training]' package. Please check your configuration.
+24-06-22.16:25:05.443 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-06-22.16:25:05.444 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+24-06-22.16:25:05.444 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+24-06-22.16:25:05.444 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+24-06-22.16:25:05.448 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+24-06-22.16:25:05.455 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-06-22.16:25:05.455 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-06-22.16:25:05.455 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-06-22.16:25:05.568 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-06-22.16:25:05.568 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1062 ms
+24-06-22.16:25:05.707 [main            ] INFO  Version                - Redisson 3.30.0
+24-06-22.16:25:05.872 [main            ] WARN  SequentialDnsAddressResolverFactory - DNS TCP fallback on UDP query timeout disabled. Upgrade Netty to 4.1.105 or higher.
+24-06-22.16:25:06.042 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.16:25:06.099 [redisson-netty-1-19] INFO  ConnectionsHolder      - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.16:25:06.856 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-06-22.16:25:06.867 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-06-22.16:25:06.875 [main            ] INFO  Application            - Started Application in 2.747 seconds (JVM running for 3.305)
+24-06-22.16:50:32.452 [background-preinit] INFO  Version                - HV000001: Hibernate Validator 6.2.5.Final
+24-06-22.16:50:32.456 [main            ] INFO  Application            - Starting Application using Java 17.0.5 on LAPTOP-EN7AFHC7 with PID 11460 (E:\java_works\practical-training\target\classes started by HarryKL in E:\java_works\practical-training)
+24-06-22.16:50:32.457 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-06-22.16:50:32.899 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.16:50:32.900 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.16:50:32.918 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-06-22.16:50:32.984 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[top.kangyaocoding.training]' package. Please check your configuration.
+24-06-22.16:50:33.432 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-06-22.16:50:33.433 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+24-06-22.16:50:33.433 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+24-06-22.16:50:33.433 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+24-06-22.16:50:33.437 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+24-06-22.16:50:33.443 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-06-22.16:50:33.444 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-06-22.16:50:33.444 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-06-22.16:50:33.549 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-06-22.16:50:33.549 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1061 ms
+24-06-22.16:50:33.671 [main            ] INFO  Version                - Redisson 3.30.0
+24-06-22.16:50:33.833 [main            ] WARN  SequentialDnsAddressResolverFactory - DNS TCP fallback on UDP query timeout disabled. Upgrade Netty to 4.1.105 or higher.
+24-06-22.16:50:33.992 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.16:50:34.042 [redisson-netty-1-19] INFO  ConnectionsHolder      - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.16:50:34.729 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-06-22.16:50:34.739 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-06-22.16:50:34.747 [main            ] INFO  Application            - Started Application in 2.64 seconds (JVM running for 3.2)
+24-06-22.16:54:43.547 [background-preinit] INFO  Version                - HV000001: Hibernate Validator 6.2.5.Final
+24-06-22.16:54:43.551 [main            ] INFO  Application            - Starting Application using Java 17.0.5 on LAPTOP-EN7AFHC7 with PID 27828 (E:\java_works\practical-training\target\classes started by HarryKL in E:\java_works\practical-training)
+24-06-22.16:54:43.551 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-06-22.16:54:43.995 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.16:54:43.996 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.16:54:44.014 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+24-06-22.16:54:44.081 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[top.kangyaocoding.training]' package. Please check your configuration.
+24-06-22.16:54:44.529 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-06-22.16:54:44.529 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+24-06-22.16:54:44.529 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+24-06-22.16:54:44.529 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+24-06-22.16:54:44.533 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+24-06-22.16:54:44.540 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-06-22.16:54:44.540 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-06-22.16:54:44.540 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-06-22.16:54:44.652 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-06-22.16:54:44.652 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1070 ms
+24-06-22.16:54:44.777 [main            ] INFO  Version                - Redisson 3.30.0
+24-06-22.16:54:44.939 [main            ] WARN  SequentialDnsAddressResolverFactory - DNS TCP fallback on UDP query timeout disabled. Upgrade Netty to 4.1.105 or higher.
+24-06-22.16:54:45.101 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.16:54:45.151 [redisson-netty-1-19] INFO  ConnectionsHolder      - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.16:54:45.842 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-06-22.16:54:45.853 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-06-22.16:54:45.861 [main            ] INFO  Application            - Started Application in 2.659 seconds (JVM running for 3.227)
+24-06-22.16:55:36.278 [background-preinit] INFO  Version                - HV000001: Hibernate Validator 6.2.5.Final
+24-06-22.16:55:36.279 [main            ] INFO  Application            - Starting Application using Java 17.0.5 on LAPTOP-EN7AFHC7 with PID 1436 (E:\java_works\practical-training\target\classes started by HarryKL in E:\java_works\practical-training)
+24-06-22.16:55:36.280 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-06-22.16:55:36.723 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.16:55:36.725 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.16:55:36.743 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+24-06-22.16:55:36.811 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[top.kangyaocoding.training]' package. Please check your configuration.
+24-06-22.16:55:37.263 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-06-22.16:55:37.264 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+24-06-22.16:55:37.264 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+24-06-22.16:55:37.264 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+24-06-22.16:55:37.268 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+24-06-22.16:55:37.275 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-06-22.16:55:37.275 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-06-22.16:55:37.275 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-06-22.16:55:37.381 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-06-22.16:55:37.381 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1071 ms
+24-06-22.16:55:37.505 [main            ] INFO  Version                - Redisson 3.30.0
+24-06-22.16:55:37.670 [main            ] WARN  SequentialDnsAddressResolverFactory - DNS TCP fallback on UDP query timeout disabled. Upgrade Netty to 4.1.105 or higher.
+24-06-22.16:55:37.831 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.16:55:37.882 [redisson-netty-1-19] INFO  ConnectionsHolder      - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.16:55:38.572 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-06-22.16:55:38.582 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-06-22.16:55:38.591 [main            ] INFO  Application            - Started Application in 2.66 seconds (JVM running for 3.23)
+24-06-22.16:56:08.172 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-06-22.16:56:08.173 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-06-22.16:56:08.174 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-06-22.17:00:21.302 [background-preinit] INFO  Version                - HV000001: Hibernate Validator 6.2.5.Final
+24-06-22.17:00:21.306 [main            ] INFO  Application            - Starting Application using Java 17.0.5 on LAPTOP-EN7AFHC7 with PID 1372 (E:\java_works\practical-training\target\classes started by HarryKL in E:\java_works\practical-training)
+24-06-22.17:00:21.306 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-06-22.17:00:21.765 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.17:00:21.767 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.17:00:21.785 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+24-06-22.17:00:21.855 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[top.kangyaocoding.training]' package. Please check your configuration.
+24-06-22.17:00:22.310 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-06-22.17:00:22.311 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+24-06-22.17:00:22.311 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+24-06-22.17:00:22.311 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+24-06-22.17:00:22.315 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+24-06-22.17:00:22.322 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-06-22.17:00:22.322 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-06-22.17:00:22.322 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-06-22.17:00:22.428 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-06-22.17:00:22.429 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1092 ms
+24-06-22.17:00:22.550 [main            ] INFO  Version                - Redisson 3.30.0
+24-06-22.17:00:22.713 [main            ] WARN  SequentialDnsAddressResolverFactory - DNS TCP fallback on UDP query timeout disabled. Upgrade Netty to 4.1.105 or higher.
+24-06-22.17:00:22.877 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.17:00:22.927 [redisson-netty-1-19] INFO  ConnectionsHolder      - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.17:00:23.630 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-06-22.17:00:23.640 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-06-22.17:00:23.648 [main            ] INFO  Application            - Started Application in 2.691 seconds (JVM running for 3.253)
+24-06-22.17:07:41.845 [background-preinit] INFO  Version                - HV000001: Hibernate Validator 6.2.5.Final
+24-06-22.17:07:41.851 [main            ] INFO  Application            - Starting Application using Java 17.0.5 on LAPTOP-EN7AFHC7 with PID 6988 (E:\java_works\practical-training\target\classes started by HarryKL in E:\java_works\practical-training)
+24-06-22.17:07:41.851 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-06-22.17:07:42.291 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.17:07:42.293 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.17:07:42.310 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-06-22.17:07:42.377 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[top.kangyaocoding.training]' package. Please check your configuration.
+24-06-22.17:07:42.823 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-06-22.17:07:42.824 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+24-06-22.17:07:42.824 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+24-06-22.17:07:42.824 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+24-06-22.17:07:42.828 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+24-06-22.17:07:42.834 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-06-22.17:07:42.835 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-06-22.17:07:42.835 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-06-22.17:07:42.939 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-06-22.17:07:42.939 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1058 ms
+24-06-22.17:07:43.063 [main            ] INFO  Version                - Redisson 3.30.0
+24-06-22.17:07:43.222 [main            ] WARN  SequentialDnsAddressResolverFactory - DNS TCP fallback on UDP query timeout disabled. Upgrade Netty to 4.1.105 or higher.
+24-06-22.17:07:43.383 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.17:07:43.433 [redisson-netty-1-19] INFO  ConnectionsHolder      - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.17:07:44.113 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-06-22.17:07:44.123 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-06-22.17:07:44.132 [main            ] INFO  Application            - Started Application in 2.637 seconds (JVM running for 3.217)
+24-06-22.17:08:55.304 [background-preinit] INFO  Version                - HV000001: Hibernate Validator 6.2.5.Final
+24-06-22.17:08:55.308 [main            ] INFO  Application            - Starting Application using Java 17.0.5 on LAPTOP-EN7AFHC7 with PID 23684 (E:\java_works\practical-training\target\classes started by HarryKL in E:\java_works\practical-training)
+24-06-22.17:08:55.309 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-06-22.17:08:55.760 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.17:08:55.762 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.17:08:55.781 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+24-06-22.17:08:55.851 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[top.kangyaocoding.training]' package. Please check your configuration.
+24-06-22.17:08:56.316 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-06-22.17:08:56.317 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+24-06-22.17:08:56.317 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+24-06-22.17:08:56.317 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+24-06-22.17:08:56.321 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+24-06-22.17:08:56.328 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-06-22.17:08:56.328 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-06-22.17:08:56.329 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-06-22.17:08:56.439 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-06-22.17:08:56.439 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1099 ms
+24-06-22.17:08:56.584 [main            ] INFO  Version                - Redisson 3.30.0
+24-06-22.17:08:56.754 [main            ] WARN  SequentialDnsAddressResolverFactory - DNS TCP fallback on UDP query timeout disabled. Upgrade Netty to 4.1.105 or higher.
+24-06-22.17:08:56.914 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.17:08:56.966 [redisson-netty-1-19] INFO  ConnectionsHolder      - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.17:08:57.677 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-06-22.17:08:57.687 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-06-22.17:08:57.696 [main            ] INFO  Application            - Started Application in 2.741 seconds (JVM running for 3.301)
+24-06-22.17:16:17.998 [background-preinit] INFO  Version                - HV000001: Hibernate Validator 6.2.5.Final
+24-06-22.17:16:18.003 [main            ] INFO  Application            - Starting Application using Java 17.0.5 on LAPTOP-EN7AFHC7 with PID 2612 (E:\java_works\practical-training\target\classes started by HarryKL in E:\java_works\practical-training)
+24-06-22.17:16:18.003 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-06-22.17:16:18.474 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.17:16:18.477 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.17:16:18.498 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-06-22.17:16:18.588 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[top.kangyaocoding.training]' package. Please check your configuration.
+24-06-22.17:16:19.061 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-06-22.17:16:19.061 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+24-06-22.17:16:19.062 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+24-06-22.17:16:19.062 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+24-06-22.17:16:19.066 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+24-06-22.17:16:19.073 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-06-22.17:16:19.073 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-06-22.17:16:19.074 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-06-22.17:16:19.194 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-06-22.17:16:19.194 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1158 ms
+24-06-22.17:16:19.317 [main            ] INFO  Version                - Redisson 3.30.0
+24-06-22.17:16:19.485 [main            ] WARN  SequentialDnsAddressResolverFactory - DNS TCP fallback on UDP query timeout disabled. Upgrade Netty to 4.1.105 or higher.
+24-06-22.17:16:19.656 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.17:16:19.726 [redisson-netty-1-19] INFO  ConnectionsHolder      - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.17:16:20.445 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-06-22.17:16:20.455 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-06-22.17:16:20.463 [main            ] INFO  Application            - Started Application in 2.819 seconds (JVM running for 3.413)
+24-06-22.17:18:37.394 [main            ] INFO  Application            - Starting Application using Java 17.0.5 on LAPTOP-EN7AFHC7 with PID 27160 (E:\java_works\practical-training\target\classes started by HarryKL in E:\java_works\practical-training)
+24-06-22.17:18:37.393 [background-preinit] INFO  Version                - HV000001: Hibernate Validator 6.2.5.Final
+24-06-22.17:18:37.395 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-06-22.17:18:37.832 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-06-22.17:18:37.834 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-06-22.17:18:37.860 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+24-06-22.17:18:37.927 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[top.kangyaocoding.training]' package. Please check your configuration.
+24-06-22.17:18:38.374 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-06-22.17:18:38.374 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+24-06-22.17:18:38.375 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+24-06-22.17:18:38.375 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+24-06-22.17:18:38.379 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+24-06-22.17:18:38.385 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-06-22.17:18:38.386 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-06-22.17:18:38.386 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-06-22.17:18:38.498 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-06-22.17:18:38.498 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1072 ms
+24-06-22.17:18:38.625 [main            ] INFO  Version                - Redisson 3.30.0
+24-06-22.17:18:38.795 [main            ] WARN  SequentialDnsAddressResolverFactory - DNS TCP fallback on UDP query timeout disabled. Upgrade Netty to 4.1.105 or higher.
+24-06-22.17:18:38.956 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.17:18:39.007 [redisson-netty-1-19] INFO  ConnectionsHolder      - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-06-22.17:18:39.720 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-06-22.17:18:39.730 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-06-22.17:18:39.738 [main            ] INFO  Application            - Started Application in 2.694 seconds (JVM running for 3.253)

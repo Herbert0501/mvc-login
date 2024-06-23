@@ -1,0 +1,5 @@
+spring:
+  config:
+    name: practical-training
+  profiles:
+    active: dev

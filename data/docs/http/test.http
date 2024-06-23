@@ -1,0 +1,47 @@
+###
+GET http://localhost:8090/test/example
+
+###
+POST http://localhost:8090/user/code
+Content-Type: application/x-www-form-urlencoded
+
+email = 1022291728@qq.com
+
+###
+POST http://localhost:8090/user/login
+Content-Type: application/json
+
+{
+  "email": "1156960140@qq.com",
+  "code": "1156960140",
+  "password": ""
+}
+
+###
+GET http://localhost:8090/user/me
+authorization: 16e1b24c-fb35-40a5-9426-4c2bec41c861
+
+###
+GET http://localhost:8090/user/2
+authorization: 747fe996-8833-464f-866b-5392ffadd83f
+
+###
+POST http://localhost:8090/user/update/password
+Content-Type: application/json
+authorization: 747fe996-8833-464f-866b-5392ffadd83f
+
+{
+    "userId": 2,
+    "newPassword": "123456"
+}
+
+
+###
+POST http://localhost:8090/user/login/password
+Content-Type: application/json
+
+{
+  "email": "2294943022@qq.com",
+  "code": "",
+  "password": "123456"
+}
