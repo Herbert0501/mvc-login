@@ -107,15 +107,15 @@ public class UserService extends ServiceImpl<UserMapper, User> implements IUserS
         }
         // 通过邮箱查询用户
         User user = query().eq("email", email).one();
-        if (user == null){
+        if (user == null) {
             log.error("密码登录，用户不存在！未使用邮箱注册！");
-            GracefulResponse.raiseException("401", "用户不存在！请先使用邮箱注册！");
+            GracefulResponse.raiseException("400", "用户不存在！请先使用邮箱注册！");
         }
         String password = user.getPassword();
         // 匹配加密后的密码
         if (!passwordEncoder.matches(loginForm.getPassword(), password)) {
             log.error("密码错误！");
-            throw new GracefulResponseDataException("401","密码错误！");
+            throw new GracefulResponseDataException("400", "密码错误！");
         }
         // 将信息保存到 Redis
         return saveUserToRedis(user);

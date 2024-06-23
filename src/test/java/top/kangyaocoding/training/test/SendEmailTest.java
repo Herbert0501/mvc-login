@@ -7,7 +7,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
  
-public class SendEmail implements Runnable{
+public class SendEmailTest implements Runnable{
     private String email;// 收件人邮箱
     private String userName;// 用户名
     private Long id; // 用户id
@@ -17,7 +17,7 @@ public class SendEmail implements Runnable{
     private String articleTitle; //文章标题
  
  
-    public SendEmail(String email, String detail,  String userName, int type, String pageUrl, String articleTitle) {
+    public SendEmailTest(String email, String detail, String userName, int type, String pageUrl, String articleTitle) {
         this.email = email;
         this.userName = userName;
         this.detail=detail;
@@ -30,9 +30,9 @@ public class SendEmail implements Runnable{
         // 1.创建连接对象javax.mail.Session
         // 2.创建邮件对象 javax.mail.Message
         // 3.发送一封激活邮件
-        String from = "kaiouken@mail.kangyaocoding.top";// 发件人电子邮箱
-        String host = "smtpdm.aliyun.com"; // 指定发送邮件的主机smtp.qq.com(QQ)|smtp.163.com(网易)
-        String code = "fyuKangYaotpwbebh01"; // 发件人邮箱账号、授权码
+        String from = "";// 发件人电子邮箱
+        String host = ""; // 指定发送邮件的主机smtp.qq.com(QQ)|smtp.163.com(网易)
+        String code = ""; // 发件人邮箱账号、授权码
  
         Properties properties = System.getProperties();// 获取系统属性
  
@@ -105,7 +105,7 @@ public class SendEmail implements Runnable{
     }
 
     public static void main(String[] args) {
-        new Thread(new SendEmail("1022291728@qq.com", "测试邮件内容",
+        new Thread(new SendEmailTest("1022291728@qq.com", "测试邮件内容",
                 "kaiouken",0,"","")).start();
     }
 }
